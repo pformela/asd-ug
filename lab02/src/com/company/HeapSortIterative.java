@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class HeapSort {
+public class HeapSortIterative {
 
     public static int[] buildHeap(int[] arr) {
         int heapSize = arr.length; // 11
@@ -15,29 +15,34 @@ public class HeapSort {
 
         for(int i = lastNodeFatherIndex; i >= 0; i--)
             arr = heapify(arr, heapSize, i);
-
         return arr;
     }
 
     public static int[] heapify(int[] arr, int heapSize, int i) {
-        int leftSonIndex = 2 * i + 1;
-        int rightSonIndex = 2 * i + 2;
+        int leftSonIndex;
+        int rightSonIndex;
         int largestIndex;
 
-        if(leftSonIndex < heapSize && arr[leftSonIndex] > arr[i])
-            largestIndex = leftSonIndex;
-        else
-            largestIndex = i;
+        do {
+            leftSonIndex = 2 * i + 1;
+            rightSonIndex = 2 * i + 2;
 
-        if(rightSonIndex < heapSize && arr[rightSonIndex] > arr[largestIndex])
-            largestIndex = rightSonIndex;
+            if(leftSonIndex < heapSize && arr[leftSonIndex] > arr[i])
+                largestIndex = leftSonIndex;
+            else
+                largestIndex = i;
 
-        if(largestIndex != i) {
-            int tmp = arr[i];
-            arr[i] = arr[largestIndex];
-            arr[largestIndex] = tmp;
-            heapify(arr, heapSize, largestIndex);
-        }
+            if(rightSonIndex < heapSize && arr[rightSonIndex] > arr[largestIndex])
+                largestIndex = rightSonIndex;
+
+            if(largestIndex != i) {
+                int tmp = arr[i];
+                arr[i] = arr[largestIndex];
+                arr[largestIndex] = tmp;
+                i = largestIndex;
+            } else break;
+
+        } while(true);
 
         return arr;
     }
@@ -59,7 +64,6 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-
         String number;
         List<Integer> nums = new ArrayList<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -74,7 +78,6 @@ public class HeapSort {
 
         int[] arr = nums.stream().mapToInt(Integer::intValue).toArray();
 
-//        System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(heapSort(arr)));
     }
 }
