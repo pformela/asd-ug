@@ -1,0 +1,430 @@
+-----------------------------------------
+HYBRID QUICKSORT C = 5
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 7 ms
+Odwrotnie posortowana tablica: 6 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 31 ms
+Odwrotnie posortowana tablica: 25 ms
+Tablica z jednakowymi elementami: 17 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 105 ms
+Odwrotnie posortowana tablica: 83 ms
+Tablica z jednakowymi elementami: 59 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 393 ms
+Odwrotnie posortowana tablica: 325 ms
+Tablica z jednakowymi elementami: 236 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 4 ms
+Posortowana tablica: 1358 ms
+Odwrotnie posortowana tablica: 1169 ms
+Tablica z jednakowymi elementami: 939 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 8 ms
+Posortowana tablica: 4183 ms
+Odwrotnie posortowana tablica: 4019 ms
+Tablica z jednakowymi elementami: 3720 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 10
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 7 ms
+Odwrotnie posortowana tablica: 5 ms
+Tablica z jednakowymi elementami: 5 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 31 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 17 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 104 ms
+Odwrotnie posortowana tablica: 82 ms
+Tablica z jednakowymi elementami: 59 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 386 ms
+Odwrotnie posortowana tablica: 313 ms
+Tablica z jednakowymi elementami: 233 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 4 ms
+Posortowana tablica: 1346 ms
+Odwrotnie posortowana tablica: 1170 ms
+Tablica z jednakowymi elementami: 929 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 9 ms
+Posortowana tablica: 4171 ms
+Odwrotnie posortowana tablica: 4099 ms
+Tablica z jednakowymi elementami: 3828 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 15
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 8 ms
+Odwrotnie posortowana tablica: 6 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 32 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 17 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 108 ms
+Odwrotnie posortowana tablica: 84 ms
+Tablica z jednakowymi elementami: 60 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 399 ms
+Odwrotnie posortowana tablica: 319 ms
+Tablica z jednakowymi elementami: 234 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 4 ms
+Posortowana tablica: 1348 ms
+Odwrotnie posortowana tablica: 1171 ms
+Tablica z jednakowymi elementami: 933 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 9 ms
+Posortowana tablica: 4168 ms
+Odwrotnie posortowana tablica: 4019 ms
+Tablica z jednakowymi elementami: 3722 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 20
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 8 ms
+Odwrotnie posortowana tablica: 6 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 30 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 16 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 104 ms
+Odwrotnie posortowana tablica: 81 ms
+Tablica z jednakowymi elementami: 59 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 385 ms
+Odwrotnie posortowana tablica: 313 ms
+Tablica z jednakowymi elementami: 233 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 5 ms
+Posortowana tablica: 1349 ms
+Odwrotnie posortowana tablica: 1171 ms
+Tablica z jednakowymi elementami: 930 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 10 ms
+Posortowana tablica: 4185 ms
+Odwrotnie posortowana tablica: 4033 ms
+Tablica z jednakowymi elementami: 3725 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 25
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 8 ms
+Odwrotnie posortowana tablica: 6 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 31 ms
+Odwrotnie posortowana tablica: 23 ms
+Tablica z jednakowymi elementami: 16 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 104 ms
+Odwrotnie posortowana tablica: 82 ms
+Tablica z jednakowymi elementami: 58 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 388 ms
+Odwrotnie posortowana tablica: 314 ms
+Tablica z jednakowymi elementami: 233 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 5 ms
+Posortowana tablica: 1348 ms
+Odwrotnie posortowana tablica: 1170 ms
+Tablica z jednakowymi elementami: 946 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 10 ms
+Posortowana tablica: 4189 ms
+Odwrotnie posortowana tablica: 4023 ms
+Tablica z jednakowymi elementami: 3721 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 30
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 7 ms
+Odwrotnie posortowana tablica: 5 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 30 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 17 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 104 ms
+Odwrotnie posortowana tablica: 82 ms
+Tablica z jednakowymi elementami: 59 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 386 ms
+Odwrotnie posortowana tablica: 315 ms
+Tablica z jednakowymi elementami: 234 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 5 ms
+Posortowana tablica: 1353 ms
+Odwrotnie posortowana tablica: 1169 ms
+Tablica z jednakowymi elementami: 933 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 10 ms
+Posortowana tablica: 4185 ms
+Odwrotnie posortowana tablica: 4012 ms
+Tablica z jednakowymi elementami: 3713 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 35
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 7 ms
+Odwrotnie posortowana tablica: 6 ms
+Tablica z jednakowymi elementami: 5 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 30 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 17 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 103 ms
+Odwrotnie posortowana tablica: 82 ms
+Tablica z jednakowymi elementami: 58 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 3 ms
+Posortowana tablica: 385 ms
+Odwrotnie posortowana tablica: 315 ms
+Tablica z jednakowymi elementami: 231 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 6 ms
+Posortowana tablica: 1344 ms
+Odwrotnie posortowana tablica: 1164 ms
+Tablica z jednakowymi elementami: 926 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 11 ms
+Posortowana tablica: 4187 ms
+Odwrotnie posortowana tablica: 4041 ms
+Tablica z jednakowymi elementami: 3719 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 40
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 8 ms
+Odwrotnie posortowana tablica: 6 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 31 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 17 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 105 ms
+Odwrotnie posortowana tablica: 82 ms
+Tablica z jednakowymi elementami: 59 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 3 ms
+Posortowana tablica: 388 ms
+Odwrotnie posortowana tablica: 314 ms
+Tablica z jednakowymi elementami: 232 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 5 ms
+Posortowana tablica: 1342 ms
+Odwrotnie posortowana tablica: 1164 ms
+Tablica z jednakowymi elementami: 933 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 12 ms
+Posortowana tablica: 4193 ms
+Odwrotnie posortowana tablica: 4004 ms
+Tablica z jednakowymi elementami: 3726 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 45
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 7 ms
+Odwrotnie posortowana tablica: 7 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 31 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 16 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 103 ms
+Odwrotnie posortowana tablica: 81 ms
+Tablica z jednakowymi elementami: 58 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 3 ms
+Posortowana tablica: 386 ms
+Odwrotnie posortowana tablica: 314 ms
+Tablica z jednakowymi elementami: 233 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 6 ms
+Posortowana tablica: 1345 ms
+Odwrotnie posortowana tablica: 1168 ms
+Tablica z jednakowymi elementami: 929 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 12 ms
+Posortowana tablica: 4169 ms
+Odwrotnie posortowana tablica: 4002 ms
+Tablica z jednakowymi elementami: 3709 ms
+
+-----------------------------------------
+HYBRID QUICKSORT C = 50
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 8 ms
+Odwrotnie posortowana tablica: 6 ms
+Tablica z jednakowymi elementami: 4 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 30 ms
+Odwrotnie posortowana tablica: 24 ms
+Tablica z jednakowymi elementami: 16 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 104 ms
+Odwrotnie posortowana tablica: 81 ms
+Tablica z jednakowymi elementami: 59 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 3 ms
+Posortowana tablica: 386 ms
+Odwrotnie posortowana tablica: 313 ms
+Tablica z jednakowymi elementami: 232 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 6 ms
+Posortowana tablica: 1348 ms
+Odwrotnie posortowana tablica: 1172 ms
+Tablica z jednakowymi elementami: 934 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 13 ms
+Posortowana tablica: 4191 ms
+Odwrotnie posortowana tablica: 3999 ms
+Tablica z jednakowymi elementami: 3713 ms
+
+-------------------------------------------
+
+QUICKSORT NORMALNY
+
+Liczba elementów: 4000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 11 ms
+Odwrotnie posortowana tablica: 8 ms
+Tablica z jednakowymi elementami: 3 ms
+
+Liczba elementów: 8000
+Losowo wygenerowana tablica: 1 ms
+Posortowana tablica: 45 ms
+Odwrotnie posortowana tablica: 29 ms
+Tablica z jednakowymi elementami: 13 ms
+
+Liczba elementów: 15000
+Losowo wygenerowana tablica: 0 ms
+Posortowana tablica: 147 ms
+Odwrotnie posortowana tablica: 100 ms
+Tablica z jednakowymi elementami: 47 ms
+
+Liczba elementów: 30000
+Losowo wygenerowana tablica: 2 ms
+Posortowana tablica: 542 ms
+Odwrotnie posortowana tablica: 380 ms
+Tablica z jednakowymi elementami: 187 ms
+
+Liczba elementów: 60000
+Losowo wygenerowana tablica: 4 ms
+Posortowana tablica: 1887 ms
+Odwrotnie posortowana tablica: 1395 ms
+Tablica z jednakowymi elementami: 743 ms
+
+Liczba elementów: 120000
+Losowo wygenerowana tablica: 9 ms
+Posortowana tablica: 5885 ms
+Odwrotnie posortowana tablica: 4863 ms
+Tablica z jednakowymi elementami: 3007 ms
+
