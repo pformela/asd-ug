@@ -60,7 +60,6 @@ public class QuickSort implements Runnable {
             System.out.println("Liczba elementów: " + elements);
 
             randomlyGeneratedArray = IntStream.generate(() -> new Random().nextInt(100000)).limit(elements).toArray();
-//            System.out.println(Arrays.toString(randomlyGeneratedArray));
 
             start = System.currentTimeMillis();
             quickSort(randomlyGeneratedArray, 0, randomlyGeneratedArray.length - 1);
@@ -71,7 +70,6 @@ public class QuickSort implements Runnable {
             sortedArray = IntStream.generate(() -> new Random().nextInt(100000)).limit(elements).toArray();
             Arrays.sort(sortedArray);
 
-//            System.out.println(Arrays.toString(sortedArray));
             start = System.currentTimeMillis();
             quickSort(sortedArray, 0, sortedArray.length - 1);
             end = System.currentTimeMillis();
@@ -81,7 +79,6 @@ public class QuickSort implements Runnable {
             reversedSortedArray = new int[sortedArray.length];
             System.arraycopy(sortedArray, 0, reversedSortedArray, 0, sortedArray.length);
             reversedSortedArray = reverse(reversedSortedArray);
-//            System.out.println(Arrays.toString(reversedSortedArray));
 
             start = System.currentTimeMillis();
             quickSort(reversedSortedArray, 0, reversedSortedArray.length - 1);
@@ -92,7 +89,6 @@ public class QuickSort implements Runnable {
             arrayWithEqualItems = new int[elements];
             Arrays.fill(arrayWithEqualItems, 2);
 
-//            System.out.println(Arrays.toString(arrayWithEqualItems));
             start = System.currentTimeMillis();
             quickSort(arrayWithEqualItems, 0, arrayWithEqualItems.length - 1);
             end = System.currentTimeMillis();
