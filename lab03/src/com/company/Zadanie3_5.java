@@ -1,10 +1,10 @@
 package com.company;
 
-<<<<<<< HEAD
+//<<<<<<< HEA/D
 import com.sun.tools.javac.Main;
 
-=======
->>>>>>> 86ef7e6 (fix bugs)
+//=======
+//>>>>>>> 86ef7e6 (fix bugs)
 import java.util.Arrays;
 import java.util.Random;
 import java.util.stream.IntStream;
