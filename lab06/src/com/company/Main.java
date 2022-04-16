@@ -1,34 +1,24 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Objects;
 
 
-class HashNode<K, V> {
-    K key;
-    V value;
-    final int hashCode;
-    HashNode<K, V> next;
-
-    public HashNode(K key, V value, int hashCode) {
-        this.key = key;
-        this.value = value;
-        this.hashCode = hashCode;
-    }
-}
-
-class HashTable<K, V> {
-    private ArrayList<HashNode<K, V>> table;
+class HashTable<K> {
+    private ArrayList<K>[] table;
     private int numOfBuckets;
     private int currentSize;
 
     public HashTable(int numOfBuckets) {
-        this.table = new ArrayList<>();
+        this.table = new ArrayList[numOfBuckets];
         this.numOfBuckets = numOfBuckets;
         this.currentSize = 0;
 
         for(int i = 0; i < numOfBuckets; i++) {
-            table.add(null);
+            table[i] = new ArrayList<>();
         }
     }
 
@@ -38,41 +28,37 @@ class HashTable<K, V> {
         return (index < 0) ? index * -1 : index;
     }
 
-    public V get(K key) {
-        int bucketIndex = getBucketIndex(key);
-        int hashCode = hashCode(key);
+    public K get(K value) {
+        int bucketIndex = getBucketIndex(value);
+        int hashCode = hashCode(value);
 
-        HashNode<K, V> head = table.get(bucketIndex);
+        ArrayList<K> head = table[bucketIndex];
 
-        while(head != null) {
-            if(head.key.equals(key) && head.hashCode == hashCode)
-                return head.value;
-            head = head.next;
+        for(int i = 0; i < head.size(); i++) {
+            K currItem = head.get(i);
+            if(currItem.equals(value)) {
+                if(hashCode(currItem) == hashCode)
+                    return currItem;
+            }
         }
 
         return null;
     }
 
-    public void add(K key, V value) {
-        int bucketIndex = getBucketIndex(key);
-        int hashCode = hashCode(key);
+    public void add(K value) {
+        int bucketIndex = getBucketIndex(value);
+//        int hashCode = hashCode(value);
 
-        HashNode<K, V> head = table.get(bucketIndex);
+        ArrayList<K> bucket = table[bucketIndex];
 
-        while(head != null) {
-            if(head.key.equals(key) && head.hashCode == hashCode) {
-                head.value = value;
-                return;
-            }
-            head = head.next;
+        bucket.add(value);
+        currentSize++;
+    }
+
+    public void printTable() {
+        for (ArrayList<K> ks : table) {
+            System.out.println(ks);
         }
-
-        this.currentSize++;
-        head = table.get(bucketIndex);
-        HashNode<K, V> newNode = new HashNode<>(key, value, hashCode);
-
-        newNode.next = head;
-        table.set(bucketIndex, newNode);
     }
 
     public int hashCode(K element) {
@@ -99,14 +85,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        HashTable<String, String> table = new HashTable<>(100);
+        HashTable<String> table = new HashTable<>(10);
 
-        System.out.println(table.hashCode("string"));
-        System.out.println(table.hashCode("string"));
-        System.out.println(table.hashCode("aaaaaa"));
-        System.out.println(table.hashCode("bbbbb"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String data;
 
-        System.out.println((int) 'a');
-        System.out.println((int) 's');
+        try {
+            while((data = br.readLine()) != null) {
+                table.add(data);
+            }
+            br.close();
+
+        } catch (IOException ioe) {
+            System.out.println("IO error trying to read file.");
+        }
     }
 }
