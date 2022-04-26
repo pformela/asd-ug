@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public class HashTable {
@@ -31,10 +33,44 @@ public class Main {
 
             for(int i = 0; i < numberOfBuckets; i++) {
                 index = (hashFunction1(key) + i) % numberOfBuckets;
-//                if(table[index] == 0)
+                if(this.table[index] == 0) return index;
             }
 
-            return 0;
+            return -1;
         }
+
+        public int search(int key) {
+            int index;
+
+            for(int i = 0; i < numberOfBuckets; i++) {
+                index = (hashFunction1(key) + i) % numberOfBuckets;
+                if(this.table[index] == key) return key;
+            }
+
+            return -1;
+        }
+
+        public int delete(int key) {
+            int index;
+
+            for(int i = 0; i < numberOfBuckets; i++) {
+                index = (hashFunction1(key) + i) % numberOfBuckets;
+                if(this.table[index] == key) {
+                    int tmp = this.table[index];
+                    this.table[index] = -1;
+                    return tmp;
+                }
+            }
+
+            return -1;
+        }
+
+        public void printTable() {
+            System.out.println(Arrays.toString(this.table));
+        }
+    }
+
+    public static void main(String[] args) {
+
     }
 }
