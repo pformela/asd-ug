@@ -10,23 +10,18 @@ import java.util.*;
 @SuppressWarnings("unchecked")
 public class Zadanie6_2 {
 
-    public static class HashNode<V> {
-        int key;
+    public static class HashNode<K, V> {
+        K key;
         V value;
 
-        public HashNode(int key, V value) {
+        public HashNode(K key, V value) {
             this.key = key;
             this.value = value;
-        }
-
-        public HashNode(int key) {
-            this.key = key;
-            this.value = null;
         }
     }
 
     public static class HashTable<V> {
-        HashNode<V>[] table;
+        HashNode<String, V>[] table;
         int numberOfBuckets;
         int size;
         int currentSize = 0;
@@ -35,11 +30,6 @@ public class Zadanie6_2 {
             this.numberOfBuckets = numberOfBuckets;
             this.table = new HashNode[numberOfBuckets];
             this.size = numberOfBuckets;
-
-            for(int i = 0; i < numberOfBuckets; i++) {
-                this.table[i] = null;
-            }
-
         }
 
         private int quadraticProbing(int hashCode, int i) {
@@ -57,26 +47,28 @@ public class Zadanie6_2 {
             return (index > 0) ? index : index * -1;
         }
 
-        private int hashFunc1(Integer key) {
-            return key % this.size;
+        private int hashFunc1(String key) {
+            return key.hashCode() % this.size;
 //            return key.hashCode();
         }
 
-        private int hashFunc2(Integer key) {
-            return 1 + (key % (this.size - 2));
+        private int hashFunc2(String key) {
+            return 1 + (key.hashCode() % (this.size - 2));
         }
 
-        public Integer add(Integer key, V value) {
-            HashNode<V> newNode = new HashNode<>(key, value);
-            int hashCode = hashFunc1(key);
+        public String add(String key, V value) {
+            HashNode<String, V> newNode = new HashNode<>(key, value);
+            int hashCode1 = hashFunc1(key);
+            int hashCode2 = hashFunc2(key);
 //            System.out.println("HashCode: " + hashCode);
             int bucketNumber;
 
             for(int i = 0; ; i++) {
-                bucketNumber = linearProbing(hashCode, i);
-                if(this.table[bucketNumber] == null || (this.table[bucketNumber].key == -1 && this.table[bucketNumber].value == null)) {
+                bucketNumber = doubleHashing(hashCode1, hashCode2, i);
+                if(this.table[bucketNumber] == null || this.table[bucketNumber].key.equals("del")) {
                     this.table[bucketNumber] = newNode;
                     this.currentSize++;
+//                    System.out.printf("Added %s at position %d\n", key, bucketNumber);
                     return key;
                 }
             }
@@ -84,26 +76,30 @@ public class Zadanie6_2 {
 //            throw new Exception("HashTable is full");
         }
 
-        public Integer delete(Integer key) {
-            int hashCode = hashFunc1(key);
+        public String delete(String key) {
+            int hashCode1 = hashFunc1(key);
+            int hashCode2 = hashFunc2(key);
             int bucketNumber;
 
             for(int i = 0; i < this.size; i++) {
-                bucketNumber = linearProbing(hashCode, i);
-                if(this.table[bucketNumber] != null && this.table[bucketNumber].key == key) {
-                    this.table[bucketNumber] = new HashNode<>(-1);
+                bucketNumber = doubleHashing(hashCode1, hashCode2, i);
+                if(this.table[bucketNumber] != null && this.table[bucketNumber].key.equals(key)) {
+                    this.table[bucketNumber].key = "del";
+                    this.table[bucketNumber].value = null;
+                    this.currentSize--;
+//                    System.out.printf("Deleted %s from position %d\n", key, bucketNumber);
                     return key;
                 }
             }
 
-            return -1;
+            return "";
         }
 
         public void countPlaceholders() {
             int numberOfPlaceholders = 0;
 
             for(int i = 0; i < size; i++) {
-                if(this.table[i] != null && this.table[i].key == -1)
+                if(this.table[i] != null && this.table[i].key.equals("del"))
                     numberOfPlaceholders++;
             }
 
@@ -116,29 +112,29 @@ public class Zadanie6_2 {
                 if(this.table[i] == null)
                     System.out.println("null");
                 else
-                    System.out.printf("key: %6s, value: %s %n", this.table[i].key, this.table[i].value);
+                    System.out.printf("key: %s\n", this.table[i]);
             }
         }
     }
 
     public static void main(String[] args) {
 
-        int numberOfBuckets = 20000;
+        int numberOfBuckets = 2003;
 
-        HashTable<String> newTable = new HashTable<>(numberOfBuckets);
+        HashTable<Integer> newTable = new HashTable(numberOfBuckets);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int numberOfLinesToRead = (int) (numberOfBuckets * 0.8);
         String currentLine;
         int initialNumberOfLinesToAdd = numberOfLinesToRead / 2;
-        Queue<Integer> keysToDelete = new LinkedList<>();
+        Queue<String> keysToDelete = new LinkedList<>();
 
         try {
             while ((currentLine = br.readLine()) != null && numberOfLinesToRead > 0) {
 
                 String[] line = currentLine.split(" ");
-                int key = java.lang.Integer.parseInt(line[0]);
-                String value = line[1];
+                Integer value = Integer.parseInt(line[0]);
+                String key = line[1];
 
                 newTable.add(key, value);
 
@@ -161,8 +157,8 @@ public class Zadanie6_2 {
             while((currentLine = br.readLine()) != null && initialNumberOfLinesToAdd > 0) {
 
                 String[] line = currentLine.split(" ");
-                int key = java.lang.Integer.parseInt(line[0]);
-                String value = line[1];
+                Integer value = Integer.parseInt(line[0]);
+                String key = line[1];
 
                 newTable.add(key, value);
 
@@ -181,3 +177,24 @@ public class Zadanie6_2 {
         newTable.countPlaceholders();
     }
 }
+
+
+// Adresowanie liniowe
+// Size:                   2003
+// Number of placeholders: 248
+// Size:                   5003
+// Number of placeholders: 597
+
+// Adresowanie kwadratowe
+// Size:                   2003
+// Number of placeholders: 263
+// Size:                   5003
+// Number of placeholders: 636
+
+// Dwukrotne haszowanie
+// Size:                   2003
+// Number of placeholders: 273
+// Size:                   5003
+// Number of placeholders: 663
+
+
