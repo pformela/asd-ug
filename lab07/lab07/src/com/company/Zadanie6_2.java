@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 
-// WARIANT S
+// WARIANT U
 
 @SuppressWarnings("unchecked")
 public class Zadanie6_2 {
@@ -178,6 +178,7 @@ public class Zadanie6_2 {
     }
 }
 
+// WARIANT U
 
 // Adresowanie liniowe
 // Size:                   2003
