@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <module external.linked.project.id="root [file:/home/LABPK/pformela/IdeaProjects/algorytmy/lab06/]" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="SBT" type="JAVA_MODULE" version="4">
+=======
+<module external.linked.project.id="root [file:/home/patryk/dsa-ug/lab06/]" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="SBT" type="JAVA_MODULE" version="4">
+>>>>>>> 8c364c5f5c3f473352b121eb5b24a3ef92991ced
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
     <output url="file://$MODULE_DIR$/target/scala-3.1.2/classes" />
     <output-test url="file://$MODULE_DIR$/target/scala-3.1.2/test-classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/scala" isTestSource="true" />
+=======
+>>>>>>> 8c364c5f5c3f473352b121eb5b24a3ef92991ced
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
