@@ -3741,4 +3741,8 @@ freedom
 software
 Copies
 raise
+<<<<<<< HEAD
 funds
+=======
+funds
+>>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
