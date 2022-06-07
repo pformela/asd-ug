@@ -1,32 +1,20 @@
 package com.company;
 
-<<<<<<< HEAD
-import java.util.ArrayList;
-import java.util.PriorityQueue;
-import java.util.Queue;
-=======
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.PriorityBlockingQueue;
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
 
 public class BST {
 
     public static class Node {
         Node left;
         Node right;
-<<<<<<< HEAD
-        int value;
-
-        Node(int value) {
-=======
         String value;
 
         Node(String value) {
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
             this.value = value;
             this.left = null;
             this.right = null;
@@ -40,11 +28,7 @@ public class BST {
             this.root = null;
         }
 
-<<<<<<< HEAD
-        public void insert(int value) {
-=======
         public void insert(String value) {
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
 
             Node newNode = new Node(value);
             Node currNode = this.root;
@@ -55,11 +39,7 @@ public class BST {
             }
 
             while (true) {
-<<<<<<< HEAD
-                if(newNode.value >= currNode.value)
-=======
                 if((newNode.value).compareTo(currNode.value) >= 0)
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
                     if(currNode.right != null) {
                         currNode = currNode.right;
                     } else {
@@ -79,24 +59,14 @@ public class BST {
         }
 
 
-<<<<<<< HEAD
-        public Node lookup(int value) {
-=======
         public Node lookup(String value) {
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
 
             Node currNode = this.root;
 
             while (currNode != null) {
-<<<<<<< HEAD
-                if(currNode.value == value)
-                    return currNode;
-                else if(value > currNode.value)
-=======
                 if(currNode.value.equals(value))
                     return currNode;
                 else if(value.compareTo(currNode.value) >= 0)
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
                     currNode = currNode.right;
                 else
                     currNode = currNode.left;
@@ -106,33 +76,13 @@ public class BST {
         }
 
         public static String centerString (int width, String s) {
-<<<<<<< HEAD
-=======
             if (s == null)
                 s = " ";
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
             return String.format("%-" + width  + "s", String.format("%" + (s.length() + (width - s.length()) / 2) + "s", s));
         }
 
         public void printFragment() {
 
-<<<<<<< HEAD
-            ArrayList<Integer> bstToList = new ArrayList<>();
-//            Queue<Integer> nodeQueue = new PriorityQueue<>();
-//
-//            for(int i = 0; i < 4; i++) {
-//
-//            }
-
-            bstToList.add(this.root.value);
-            bstToList.add(this.root.left.value);
-            bstToList.add(this.root.right.value);
-
-            System.out.println(centerString(32, Integer.toString(this.root.value)));
-            System.out.print(centerString(16, Integer.toString(this.root.right.value)));
-            System.out.print(centerString(16, Integer.toString(this.root.left.value)));
-            System.out.println();
-=======
             System.out.println(centerString(128, (this.root != null) ? this.root.value : " "));
             System.out.println();
             System.out.print(centerString(64, (this.root.left != null) ? this.root.left.value : " "));
@@ -161,7 +111,6 @@ public class BST {
             int rightHeight = binaryTreeHeight(root.right);
 
             return Math.max(leftHeight, rightHeight) + 1;
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
         }
 
     }
@@ -169,21 +118,6 @@ public class BST {
     public static void main(String[] args) {
         BinarySearchTree myBst = new BinarySearchTree();
 
-<<<<<<< HEAD
-        myBst.insert(9);
-        myBst.insert(4);
-        myBst.insert(6);
-        myBst.insert(20);
-        myBst.insert(170);
-        myBst.insert(15);
-        myBst.insert(1);
-
-        System.out.println(myBst.root);
-
-        System.out.println(myBst.lookup(20));
-        System.out.println(myBst.lookup(21));
-        System.out.println(myBst.lookup(1));
-=======
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int numberOfWords = 2000;
@@ -202,16 +136,10 @@ public class BST {
         }
 
         System.out.println("Binary tree height: " + myBst.binaryTreeHeight(myBst.root));
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b
 
         myBst.printFragment();
 
     }
-<<<<<<< HEAD
-
-}
-
-=======
 }
 
 // 500 words
@@ -222,4 +150,3 @@ public class BST {
 
 // 2000 words
 // Binary tree height: 28
->>>>>>> 8712d36555571126d11d40f33eefb0ab07902a1b

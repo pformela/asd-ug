@@ -4,6 +4,8 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Zadanie9_1 {
 
@@ -23,9 +25,9 @@ public class Zadanie9_1 {
             result.add(assembleSequence(x, y, xPos, yPos, tab, ""));
             return result;
         } else {
-            longestSequences(x, y, xPos-1, yPos, tab, result)
-                    .addAll(longestSequences(x, y, xPos, yPos-1, tab, result));
-            return result;
+            return Stream.concat(longestSequences(x, y, xPos-1, yPos, tab, result).stream(),
+                            longestSequences(x, y, xPos, yPos-1, tab, result).stream())
+                    .collect(Collectors.toList());
         }
     }
 
